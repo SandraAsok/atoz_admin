@@ -1,9 +1,7 @@
 import 'package:atoz_admin/core/colors.dart';
 import 'package:atoz_admin/core/constants.dart';
 import 'package:atoz_admin/core/firebase_functions.dart';
-import 'package:atoz_admin/presentation/screens/login/loginpage.dart';
 import 'package:atoz_admin/presentation/screens/login/signup_screen.dart';
-import 'package:atoz_admin/presentation/widgets/main_button.dart';
 import 'package:flutter/material.dart';
 
 class LoginOrSignUp extends StatelessWidget {
@@ -17,7 +15,7 @@ class LoginOrSignUp extends StatelessWidget {
         child: Stack(
       children: [
         Scaffold(
-          backgroundColor: white,
+          backgroundColor: black,
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -33,7 +31,7 @@ class LoginOrSignUp extends StatelessWidget {
                   decoration: BoxDecoration(
                       border: Border.all(color: white),
                       borderRadius: BorderRadius.circular(20),
-                      color: black),
+                      color: white),
                   child: Row(
                     children: [
                       Padding(
@@ -44,50 +42,12 @@ class LoginOrSignUp extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
                           'Continue with Google',
-                          style: TextStyle(fontSize: 20, color: white),
+                          style: TextStyle(fontSize: 20, color: black),
                         ),
                       )
                     ],
                   ),
                 ),
-              ),
-              kHeight10,
-              kHeight10,
-              Center(
-                child: SizedBox(
-                  width: size.width * 0.9,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: size.width * 0.4,
-                          height: 1,
-                          color: grey,
-                        ),
-                        Text(
-                          'Or',
-                          style: TextStyle(color: white),
-                        ),
-                        Container(
-                          width: size.width * 0.4,
-                          height: 1,
-                          color: grey,
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              kHeight10,
-              MainButton(
-                text: 'Continue with Password',
-                iconurl:
-                    'https://icons.veryicon.com/png/o/internet--web/three-body-project-icon/password-22.png',
-                color: grey,
-                widget: LoginPage(),
               ),
               kHeight10,
               kHeight10,
